@@ -8,7 +8,10 @@ if (isPostgres) {
 
     const pool = new Pool({
         connectionString: connectionUrl,
-        ssl: { rejectUnauthorized: false }
+        ssl: { rejectUnauthorized: false },
+        connectionTimeoutMillis: 8000,   // fail fast if DB unreachable
+        idleTimeoutMillis: 10000,
+        max: 5
     });
 
     function convertSql(sql) {

@@ -4,6 +4,25 @@
     { "src": "api/index.js", "use": "@vercel/node" }
   ],
   "routes": [
+    { "src": "/assets/(.*)", "dest": "/assets/$1" },
+    { "src": "/style\\.css", "dest": "/style.css" },
+    { "src": "/landing\\.css", "dest": "/landing.css" },
+    { "src": "/login\\.css", "dest": "/login.css" },
+    { "src": "/script\\.js", "dest": "/script.js" },
+    { "src": "/login\\.js", "dest": "/login.js" },
+    { "src": "/register\\.js", "dest": "/register.js" },
+    { "src": "/dashboard\\.js", "dest": "/dashboard.js" },
+    { "src": "/admin\\.js", "dest": "/admin.js" },
+    { "src": "/super-admin\\.js", "dest": "/super-admin.js" },
+    { "src": "/certificate\\.js", "dest": "/certificate.js" },
+    { "src": "/verify\\.js", "dest": "/verify.js" },
+    { "src": "/favicon\\.png", "dest": "/favicon.png" },
+    { "src": "/favicon\\.ico", "dest": "/favicon.ico" },
     { "src": "/(.*)", "dest": "/api/index.js" }
-  ]
+  ],
+  "functions": {
+    "api/index.js": {
+      "maxDuration": 30
+    }
+  }
 }
