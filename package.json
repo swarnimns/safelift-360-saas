@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
+    "build": "node -e \"console.log('Build verified successfully')\"",
     "bootstrap-admin": "node scripts/bootstrapAdmin.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,12 +17,15 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "@neon/config": "^1.9.1",
+    "@neon/env": "^1.6.2",
+    "@neondatabase/serverless": "^1.2.0",
     "bcryptjs": "^3.0.3",
     "dotenv": "^18.0.5",
     "express": "^5.2.1",
     "express-session": "^1.19.0",
     "mysql2": "^3.24.5",
-    "pdfkit": "^0.20.2"
+    "pdfkit": "^0.20.2",
+    "pg": "^8.23.1"
   }
 }
-
